@@ -1,0 +1,42 @@
+﻿apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: ollama-rules
+  namespace: llm
+  labels:
+    app: ollama
+    release: kps
+spec:
+  groups:
+    - name: ollama.rules
+      interval: 30s
+      rules:
+        - alert: OllamaDown
+          expr: ollama_up == 0
+          for: 1m
+          labels:
+            severity: critical
+            component: llm
+          annotations:
+            summary: "Ollama is not responding"
+            description: "The Ollama service has been unreachable for more than 1 minute. Pod logs and readiness probe history should be inspected."
+
+        - alert: OllamaHighInferenceLatency
+          expr: histogram_quantile(0.95, sum(rate(ollama_request_duration_seconds_bucket[5m])) by (le)) > 10
+          for: 2m
+          labels:
+            severity: warning
+            component: llm
+          annotations:
+            summary: "Ollama p95 inference latency > 10s"
+            description: "p95 inference latency has exceeded 10 seconds for more than 2 minutes. This typically indicates CPU saturation, memory pressure, or model cache eviction."
+
+        - alert: OllamaProbeErrorsRising
+          expr: rate(ollama_probe_errors_total[5m]) > 0.1
+          for: 3m
+          labels:
+            severity: warning
+            component: llm
+          annotations:
+            summary: "Ollama probe error rate is elevated"
+            description: "Probe error rate > 0.1/s for 3 minutes. Likely causes: model eviction from RAM, OOM, or API timeouts under load."

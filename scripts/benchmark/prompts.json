@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "description": "Benchmark prompts for OSS vs commercial LLM comparison. Categories align with real engineering tasks.",
+  "prompts": [
+    {
+      "id": "factual_1",
+      "category": "factual",
+      "prompt": "What is Kubernetes? Answer in one paragraph."
+    },
+    {
+      "id": "factual_2",
+      "category": "factual",
+      "prompt": "Name three Prometheus query functions and briefly describe what each one does."
+    },
+    {
+      "id": "factual_3",
+      "category": "factual",
+      "prompt": "What is the difference between a Deployment and a StatefulSet in Kubernetes?"
+    },
+    {
+      "id": "reasoning_1",
+      "category": "reasoning",
+      "prompt": "A pod keeps getting OOMKilled in production. List the top 5 most likely causes, ranked by likelihood. Be concrete."
+    },
+    {
+      "id": "reasoning_2",
+      "category": "reasoning",
+      "prompt": "A web service has p50 latency of 50ms but p99 latency of 8000ms. What does this pattern suggest about the system, and what should I investigate first?"
+    },
+    {
+      "id": "reasoning_3",
+      "category": "reasoning",
+      "prompt": "A Kubernetes Service has no endpoints, but the backing pod shows as Running. What are the possible causes? List them briefly."
+    },
+    {
+      "id": "code_1",
+      "category": "code",
+      "prompt": "Write a minimal Python function that polls a URL every 10 seconds in a loop and logs ''ok'' or the HTTP status code if not 200. Use only the standard library. Return just the code, no explanation."
+    },
+    {
+      "id": "code_2",
+      "category": "code",
+      "prompt": "Write a Kubernetes readiness probe as a YAML snippet that uses an HTTP GET on /healthz on port 8080, with a 5 second initial delay and 10 second period. Return just the YAML, no explanation."
+    },
+    {
+      "id": "summarize_1",
+      "category": "summarize",
+      "prompt": "Summarize this in exactly 2 sentences: ''Kubernetes is an open source container orchestration platform for automating deployment, scaling and operations of application containers. Originally designed by Google, the project has been maintained by the CNCF since 2014. It is written in Go and provides primitives for deploying, maintaining and scaling containerized applications, together with service discovery and load balancing.''"
+    },
+    {
+      "id": "summarize_2",
+      "category": "summarize",
+      "prompt": "Give me a one-line TL;DR of this text: ''The OOMKilled status in Kubernetes indicates that a container was terminated because it attempted to use more memory than its defined limit, causing the kernel OOM killer to forcibly stop the process. This is a common cause of reliability incidents and requires tuning memory limits or investigating memory leaks.''"
+    }
+  ]
+}

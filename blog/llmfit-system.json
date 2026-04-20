@@ -1,0 +1,23 @@
+﻿{
+  "system": {
+    "available_ram_gb": 1.04,
+    "backend": "SYCL",
+    "cpu_cores": 12,
+    "cpu_name": "12th Gen Intel(R) Core(TM) i5-1235U",
+    "gpu_count": 1,
+    "gpu_name": "Intel(R) UHD Graphics",
+    "gpu_vram_gb": 2.0,
+    "gpus": [
+      {
+        "backend": "SYCL",
+        "count": 1,
+        "name": "Intel(R) UHD Graphics",
+        "unified_memory": false,
+        "vram_gb": 2.0
+      }
+    ],
+    "has_gpu": true,
+    "total_ram_gb": 7.72,
+    "unified_memory": false
+  }
+}

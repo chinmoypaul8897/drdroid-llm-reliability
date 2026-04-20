@@ -1,0 +1,38 @@
+# Node / JavaScript
+node_modules/
+dist/
+build/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files - NEVER commit
+.env
+.env.local
+.env.*.local
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Video captures (too large for repo)
+# but we DO want media/*.png and short mp4s in there for the blog
+
+# Temporary
+*.tmp
+*.bak
