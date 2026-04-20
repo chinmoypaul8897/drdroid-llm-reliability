@@ -306,6 +306,7 @@ If you're deploying an open-source LLM, I'd offer one piece of advice above all 
 
 ---
 
-**Repo:** [link coming — will update post-submission]
+**Repo:** https://github.com/chinmoypaul8897/drdroid-llm-reliability
+**Published:** https://chinmoypaul.hashnode.dev/how-to-deploy-an-open-source-llm-reliably
 **Stack:** Kubernetes (kind) · Ollama · Llama 3.2 1B · Prometheus · Grafana · React · nginx-ingress
 **Inspired by:** [DrDroid's LGTM stack blog](https://drdroid.io/) — their approach to reliability-focused tooling content shaped how I thought about this project.
