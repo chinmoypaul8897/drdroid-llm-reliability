@@ -4,6 +4,8 @@ Deploying an open-source LLM on Kubernetes with reliability as the first-class c
 
 **Blog post:** [How to Deploy an Open Source LLM Reliably](https://chinmoypaul.hashnode.dev/how-to-deploy-open-source-llm-reliably)
 
+**Video walkthrough:** [6-minute demo on YouTube](https://youtu.be/ZlbAAsjmpdo)
+
 ---
 
 ## What's in this repo
